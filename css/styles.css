@@ -24,7 +24,9 @@
   --section-padding: 94px;
 
   /* gutters */
-  --gutter-default: 30px;
+  --card-set-gap: 30px;
+  --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 
   /* typography */
   --font-default: 'Roboto', sans-serif;
@@ -49,11 +51,29 @@ body {
 /* -----------------------UTILITY CLASSES------------ */
 .container {
   width: var(--container-width);
-  padding-left: calc(var(--gutter-default) / 2);
-  padding-right: calc(var(--gutter-default) / 2);
-  margin: 0 auto;
+  padding-left: calc(var(--card-set-gap) / 2);
+  padding-right: calc(var(--card-set-gap) / 2);
+  margin-left: auto;
+  margin-right: auto;
   /* debug */
   /* outline: 1px dashed red; */
+}
+
+/* card set */
+.card-set {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
+}
+.card-set > .item {
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
 }
 
 .button {
@@ -101,21 +121,6 @@ body {
   font-weight: 500;
   line-height: 1.625;
   letter-spacing: var(--letter-spacing-default);
-}
-
-.card-set {
-  display: flex; /* Робимо Flex-контейнер багаторядковим */
-  flex-wrap: wrap; /* Компенсуємо відступи елементів */
-  margin-left: calc(var(--gutter-default) * -1);
-  margin-top: calc(var(--gutter-default) * -1);
-  margin-bottom: 0;
-  padding: 0;
-  list-style-type: none;
-}
-.card-set > .item {
-  flex-basis: calc((100% / 4) - var(--gutter-default));
-  margin-left: var(--gutter-default);
-  margin-top: var(--gutter-default);
 }
 
 .image {
@@ -289,7 +294,7 @@ body {
   padding-top: calc(var(--section-padding) / 2);
 }
 .work-list > .item {
-  flex-basis: calc((100% / 3) - var(--gutter-default));
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
 }
 
 /* -----------------------TEAM----------------------- */
@@ -299,9 +304,9 @@ body {
 
 .card {
   background-color: var(--card-bg);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--card-shadow);
   border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
 }
 .card .card-body {
   padding: 30px 24px;
@@ -342,7 +347,7 @@ body {
   margin-right: 8px;
 }
 .portfolio-list > .item {
-  flex-basis: calc((100% / 3) - var(--gutter-default));
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
 }
 .portfolio-item {
   background-color: var(--card-bg);
