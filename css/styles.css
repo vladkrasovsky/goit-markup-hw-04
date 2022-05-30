@@ -280,6 +280,31 @@ body {
 .benefits {
   padding-bottom: calc(var(--section-padding) / 2);
 }
+.benefits-item::before {
+  content: '';
+  display: block;
+  height: 120px;
+  padding: 25px;
+  margin-bottom: var(--card-set-gap);
+
+  background-color: var(--section-bg-light);
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+.icon-antenna::before {
+  background-image: url('../images/icon-antenna.svg');
+}
+.icon-clock::before {
+  background-image: url('../images/icon-clock.svg');
+}
+.icon-diagram::before {
+  background-image: url('../images/icon-diagram.svg');
+}
+.icon-astronaut::before {
+  background-image: url('../images/icon-astronaut.svg');
+}
 .benefits-item-title,
 .benefits-item-text {
   margin-top: 0;
