@@ -231,7 +231,8 @@ body {
   margin-right: 50px;
 }
 .header-link {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   padding-bottom: var(--header-padding);
   padding-top: var(--header-padding);
 
@@ -241,6 +242,10 @@ body {
 }
 .header-list-item.current .header-link {
   color: var(--accent-color);
+}
+.header-link-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 .header-contacts {
   margin-left: auto;
