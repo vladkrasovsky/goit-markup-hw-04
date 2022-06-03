@@ -9,6 +9,7 @@
   --logo-color-dark: #000000;
   --logo-color-light: #ffffff;
   --socials-color: #ffffff;
+  --socials-bg: rgba(255, 255, 255, 0.1);
   --icon-base-color: #afb1b8;
   --main-bg: #fff;
   --section-bg-dark: #2f303a;
@@ -154,7 +155,6 @@ body {
 
 .list-socials {
   display: flex;
-  justify-content: center;
 }
 .list-socials-item {
   --size: 44px;
@@ -173,7 +173,7 @@ body {
   width: 100%;
 
   color: var(--socials-color);
-
+  background-color: var(--socials-bg);
   border-radius: 50%;
 }
 .list-socials-link:hover,
@@ -369,12 +369,17 @@ body {
   background-color: var(--section-bg-light);
 }
 
+.team-socials {
+  justify-content: center;
+}
 .team-socials .list-socials-link {
   color: var(--icon-base-color);
+  background-color: transparent;
 }
 .team-socials .list-socials-link:hover,
 .team-socials .list-socials-link:focus {
   color: var(--socials-color);
+  background-color: var(--accent-color);
 }
 
 .card {
@@ -500,6 +505,12 @@ body {
 
   background-color: var(--section-bg-dark);
 }
+.footer-wrap {
+  display: flex;
+}
+.footer-item:not(:last-child) {
+  margin-right: 70px;
+}
 .footer-logo {
   margin-bottom: 20px;
 }
@@ -518,4 +529,21 @@ body {
 .footer-link:hover,
 .footer-link:focus {
   color: var(--accent-color);
+}
+
+.follow-us {
+  margin-top: 12px;
+}
+.follow-us-title {
+  margin-bottom: 20px;
+  margin-top: 0;
+
+  color: var(--text-color-light);
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--font-size-default);
+  line-height: 1.14;
+  letter-spacing: var(--letter-spacing-default);
+  text-transform: uppercase;
 }
