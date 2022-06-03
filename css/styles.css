@@ -97,6 +97,7 @@ body {
   border-radius: 4px;
 
   cursor: pointer;
+  user-select: none;
 }
 /* button states */
 .button:hover,
@@ -197,6 +198,8 @@ body {
   font-weight: 700;
   line-height: 1.19;
   letter-spacing: var(--letter-spacing-default);
+
+  user-select: none;
 }
 .logo-dark,
 .logo-dark:hover,
