@@ -9,7 +9,7 @@
   --logo-color-dark: #000000;
   --logo-color-light: #ffffff;
   --socials-color: #ffffff;
-  --team-socials-color: #afb1b8;
+  --icon-base-color: #afb1b8;
   --main-bg: #fff;
   --section-bg-dark: #2f303a;
   --section-bg-light: #f5f4fa;
@@ -370,7 +370,7 @@ body {
 }
 
 .team-socials .list-socials-link {
-  color: var(--team-socials-color);
+  color: var(--icon-base-color);
 }
 .team-socials .list-socials-link:hover,
 .team-socials .list-socials-link:focus {
@@ -410,6 +410,37 @@ body {
 .card.centered .card-image {
   margin-left: auto;
   margin-right: auto;
+}
+
+/* ----------------------CLIENTS------------------- */
+.clients-item {
+  height: 92px;
+}
+.clients-list > .item {
+  flex-basis: calc(100% / 6 - var(--card-set-gap));
+}
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: calc(var(--card-set-gap) / 2);
+
+  color: var(--icon-base-color);
+  border: 1px solid var(--icon-base-color);
+  border-radius: 4px;
+}
+.clients-link:hover,
+.clients-link:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.clients-icon {
+  max-width: 100%;
+  max-height: 100%;
+
+  fill: currentColor;
 }
 
 /* ----------------------PORTFOLIO------------------- */
