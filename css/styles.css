@@ -515,6 +515,7 @@ body {
 }
 .footer-wrap {
   display: flex;
+  align-items: baseline;
 }
 .footer-item:not(:last-child) {
   margin-right: 70px;
@@ -539,9 +540,6 @@ body {
   color: var(--accent-color);
 }
 
-.follow-us {
-  margin-top: 12px;
-}
 .follow-us-title {
   margin-bottom: 20px;
   margin-top: 0;
